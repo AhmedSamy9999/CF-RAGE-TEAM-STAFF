@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+:root {
+  --main-color: #dc3545;
+  --bg-card-color: #ffe0e0;
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 140rem;
+  padding: 9.6rem 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  /* margin-bottom: 9.6rem; */
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertairy {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #333;
+  /* color: #45260a; */
+  /* color: #343a40; */
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+  text-align: center;
+  color: var(--black-color);
+}
+.heading-secondary span {
+  color: var(--main-color);
+}
+
+.team {
+  background-color: var(--bg-card-color);
+  display: flex;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  height: 40rem;
+  border-radius: 3.4rem;
+  padding: 3.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.team:hover {
+  cursor: pointer;
+  background-color: var(--main-color);
+}
+.team:hover .heading-tertairy,
+.team:hover .team-position {
+  color: var(--white-color);
+}
+
+.team:hover .card-btn {
+  background-color: var(--white-color);
+  color: var(--main-color);
+}
+
+.team-img {
+  position: absolute;
+  top: -5rem;
+  text-align: center;
+  width: 8rem;
+  height: 8rem;
+}
+
+.team-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.heading-tertairy {
+  margin-top: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-position {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.8;
+  color: var(--main-color);
+}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: auto;
+  padding: 1.6rem 3.2rem;
+  background-color: var(--main-color);
+  border-radius: 1.7rem;
+  color: var(--white-color);
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dis-icon {
+  font-size: 3.2rem;
+}
+
+/********************************/
+/* BELOW 1200px (Landscape Tablets) */
+/********************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px */
+    font-size: 56.26%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .headig-tertairy {
+    font-size: 2.4;
+  }
+}
+
+/********************************/
+/* BELOW 944px (Tablets) */
+/********************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 =50% */
+    font-size: 50%;
+  }
+  .grid--4-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/********************************/
+/* BELOW 704px ( Small Tablets) */
+/********************************/
+
+@media (max-width: 44em) {
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heading-secondary {
+    margin-bottom: 9.6rem;
+  }
+}
+
+/********************************/
+/* BELOW 544px ( Phones ) */
+/********************************/
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 7.2rem;
+  }
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+}
