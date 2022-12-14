@@ -16,6 +16,8 @@
   --bg-card-color: #ffe0e0;
   --white-color: #fff;
   --black-color: #000;
+  --bg-dark-color: #221f1f;
+  --bg-card-dark-color: #472427;
 }
 
 html {
@@ -28,6 +30,7 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1;
   font-weight: 400;
+  background-color: var(--bg-dark-color);
 }
 
 .container {
@@ -62,14 +65,14 @@ body {
   line-height: 1.2;
   margin-bottom: 9.6rem;
   text-align: center;
-  color: var(--black-color);
+  color: var(--white-color);
 }
 .heading-secondary span {
   color: var(--main-color);
 }
 
 .team {
-  background-color: var(--bg-card-color);
+  background-color: var(--bg-card-dark-color);
   display: flex;
   position: relative;
   justify-content: center;
@@ -100,6 +103,8 @@ body {
   text-align: center;
   width: 8rem;
   height: 8rem;
+  outline: 0.6rem solid var(--bg-dark-color);
+  border-radius: 50%;
 }
 
 .team-img img {
@@ -112,6 +117,7 @@ body {
   font-size: 2.4rem;
   font-weight: 600;
   text-transform: uppercase;
+  color: var(--white-color);
 }
 
 .content {
